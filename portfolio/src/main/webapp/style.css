@@ -1,10 +1,15 @@
+body{
+  margin: 0;
+  font-family: "Lato", sans-serif
+}
+
 .navbar {
   overflow: hidden;
   background-color: #f44336;
   position: fixed;
   top: 0;
   width: 100%;
-  box-shadow: 0px 1px;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
 }
 
 .navbar a {
@@ -20,4 +25,31 @@
 .navbar a:hover {
   background: #fff;
   color: #000000;
+}
+
+.container_1 {
+  background-color: #ee5135;
+  width: 100%;
+  height: auto;
+  text-align:center;
+}
+
+.container_1 img {
+  padding: 50px 0px 0px 5px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.container_1_text {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+}
+
+.container_1_text1 {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: #fff;
+  font-size: 17px;
 }
