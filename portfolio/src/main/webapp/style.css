@@ -153,4 +153,17 @@ body{
   font-size: 32px;
 }
 
+.footer {
+  width: 100%;
+  height: auto;
+  text-align:center;
+  padding-bottom: 20px;
+  font-size: 17px;
+  letter-spacing: 3px;
+}
+
+.footer a {
+  color: black;
+}
+
 
