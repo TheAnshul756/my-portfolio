@@ -32,6 +32,7 @@ body{
   width: 100%;
   height: auto;
   text-align:center;
+  padding-bottom: 30px;
 }
 
 .container_1 img {
@@ -55,8 +56,10 @@ body{
 }
 
 .container_2{
+  font-size: 17px;
   width: 60%;
   margin: 0 auto;
+  padding-bottom: 50px;
 }
 @keyframes load{
   from {
@@ -122,4 +125,30 @@ body{
 }
 .bar.expert::before{
   width: calc(100% - 10px);
+}
+
+.projects {
+  padding-bottom: 50px;
+}
+
+.projects img {
+  padding-right: 20px;
+  float: left;
+  width: 120px;
+}
+
+.projects a {
+  text-decoration: none;
+  color: black;
+}
+
+.projects a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+.projects i:hover {
+  text-decoration: none;
+  color: red;
+  font-size: 32px;
 }
