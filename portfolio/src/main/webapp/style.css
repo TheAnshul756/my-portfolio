@@ -166,4 +166,6 @@ body{
   color: black;
 }
 
-
+.right_float {
+  float: right;
+}
