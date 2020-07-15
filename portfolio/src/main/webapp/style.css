@@ -169,3 +169,9 @@ body{
 .right_float {
   float: right;
 }
+
+#comment-list {
+  width: 80%;
+  margin: 0 auto;
+  list-style-type: none;
+}
