@@ -14,12 +14,24 @@ function createCommentElement(comment) {
 
     const authorElement = document.createElement('span');
     authorElement.className = 'author';
-    authorElement.innerText = comment.author + ': ';
+    authorElement.innerText = comment.author + ' : ';
+
+    const br = document.createElement('br');
+    // const hr = document.createElement('hr');
+
+    const imageElement = document.createElement('img');
+    imageElement.className = 'comment_image';
+    imageElement.src = 'images/profile.png';
 
     const contentElement = document.createElement('span')
     contentElement.innerText = comment.content;
 
+    commentElement.appendChild(imageElement);
     commentElement.appendChild(authorElement);
+    commentElement.appendChild(br);
+    commentElement.appendChild(br);
     commentElement.appendChild(contentElement);
+    // commentElement.appendChild(hr);
+
     return commentElement;
 }
