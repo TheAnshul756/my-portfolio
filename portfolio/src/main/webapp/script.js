@@ -16,7 +16,7 @@ function createCommentElement(comment) {
     authorElement.className = 'author';
     authorElement.innerText = comment.author;
 
-    const br = document.createElement('br');
+    // const br = document.createElement('br');
     // const hr = document.createElement('hr');
 
     const imageElement = document.createElement('img');
@@ -27,11 +27,19 @@ function createCommentElement(comment) {
     const contentElement = document.createElement('span')
     contentElement.innerText = comment.content;
 
+    var ts = new Date(comment.timestamp);
+
+    const dateElement =  document.createElement('span');
+    dateElement.innerText = ts.toDateString() + ' ' + ts.toLocaleTimeString();
+    dateElement.className = "date";
+
     commentElement.appendChild(imageElement);
     commentElement.appendChild(authorElement);
-    commentElement.appendChild(br);
-    commentElement.appendChild(br);
+    commentElement.appendChild(document.createElement('br'));
+    commentElement.appendChild(dateElement);
+    commentElement.appendChild(document.createElement('br'));
     commentElement.appendChild(contentElement);
+    // commentElement.appendChild(br);
     // commentElement.appendChild(hr);
 
     return commentElement;

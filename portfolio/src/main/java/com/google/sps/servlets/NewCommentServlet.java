@@ -18,10 +18,12 @@ public class NewCommentServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         String author = request.getParameter("name");
         String content = request.getParameter("content");
+        long timestamp = System.currentTimeMillis();
 
         Entity commentEntity = new Entity("Comment");
         commentEntity.setProperty("author",author);
         commentEntity.setProperty("content",content);
+        commentEntity.setProperty("timestamp",timestamp);
 
         System.out.println(author + " commented \"" + content + "\".");
 

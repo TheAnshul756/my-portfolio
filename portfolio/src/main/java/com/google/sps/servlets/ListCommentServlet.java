@@ -1,11 +1,11 @@
 package com.google.sps.servlets;
 
-
 import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
+import com.google.appengine.api.datastore.Query.SortDirection;
 import com.google.gson.Gson;
 import com.google.sps.data.Comment;
 import java.io.IOException;
@@ -21,7 +21,7 @@ public class ListCommentServlet extends HttpServlet {
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        Query query = new Query("Comment");
+        Query query = new Query("Comment").addSort("timestamp", SortDirection.DESCENDING);
 
         DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
         PreparedQuery results = datastore.prepare(query);
@@ -31,8 +31,9 @@ public class ListCommentServlet extends HttpServlet {
             long id = entity.getKey().getId();
             String author = (String) entity.getProperty("author");
             String content = (String) entity.getProperty("content");
+            long timestamp = (long) entity.getProperty("timestamp");
 
-            Comment comment = new Comment(id, author, content);
+            Comment comment = new Comment(id, author, content, timestamp);
             comments.add(comment);
         }
 
