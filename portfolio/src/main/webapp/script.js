@@ -14,7 +14,7 @@ function createCommentElement(comment) {
 
     const authorElement = document.createElement('span');
     authorElement.className = 'author';
-    authorElement.innerText = comment.author + ' : ';
+    authorElement.innerText = comment.author;
 
     const br = document.createElement('br');
     // const hr = document.createElement('hr');
@@ -22,6 +22,7 @@ function createCommentElement(comment) {
     const imageElement = document.createElement('img');
     imageElement.className = 'comment_image';
     imageElement.src = 'images/profile.png';
+    imageElement.alt =  'profile pic';
 
     const contentElement = document.createElement('span')
     contentElement.innerText = comment.content;
