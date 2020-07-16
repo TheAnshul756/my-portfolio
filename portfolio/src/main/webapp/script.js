@@ -16,8 +16,6 @@ function createCommentElement(comment) {
     authorElement.className = 'author';
     authorElement.innerText = comment.author;
 
-    // const br = document.createElement('br');
-    // const hr = document.createElement('hr');
 
     const imageElement = document.createElement('img');
     imageElement.className = 'comment_image';
@@ -39,8 +37,16 @@ function createCommentElement(comment) {
     commentElement.appendChild(dateElement);
     commentElement.appendChild(document.createElement('br'));
     commentElement.appendChild(contentElement);
-    // commentElement.appendChild(br);
-    // commentElement.appendChild(hr);
 
     return commentElement;
+}
+
+function contentChecker() {
+    var content = document.getElementById('textarea').value;
+    var author = document.getElementsByClassName('name-container')[0].value;
+    if(content.length==0 || author.length==0) {
+        alert('Name or Comment Missing.');
+        return false;
+    }
+    return true;
 }

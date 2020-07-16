@@ -22,10 +22,10 @@
       <div id="comment-list" class="container_3"></div>
 
       <div class="container_3">
-         <form method="POST" action="/new-comment">
+         <form method="POST" action="/new-comment" onsubmit="return  contentChecker();">
             <input class="name-container" placeholder="Name" type="text" name="name">
             <br>
-            <textarea rows = "5" cols = "60" class="comment-container" placeholder="Write your comment here!" name="content"></textarea>
+            <textarea id="textarea" rows = "5" cols = "60" class="comment-container" placeholder="Write your comment here!" name="content"></textarea>
             <br>
             <button class="form-submit-button">Share</button>
          </form>

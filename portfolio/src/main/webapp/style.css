@@ -208,8 +208,11 @@ body{
 }
 
 .comment {
-  height: 105px;
+  height: auto;
+  min-height: 105px;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+  margin-bottom: 5px;
+  padding: 5px;
 }
 
 .author {
