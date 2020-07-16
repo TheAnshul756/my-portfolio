@@ -1,4 +1,5 @@
 function loadComments() {
+    console.log("fetching comments")
     fetch('/list-comments').then(response => response.json()).then((comments) => {
         const commentListElement = document.getElementById('comment-list');
         comments.forEach((comment) => {

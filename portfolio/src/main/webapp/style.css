@@ -175,3 +175,33 @@ body{
   margin: 0 auto;
   list-style-type: none;
 }
+
+.container_3{
+  font-size: 17px;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  width: 60%;
+}
+
+.name-container {
+  float: left;
+  height: 20px;
+}
+
+.comment-container{
+  height: 80px;
+  width: 100%;
+}
+
+.form-submit-button {
+  background: #0066A2;
+  color: white;
+  border-style: outset;
+  border-color: #0066A2;
+  height: 50px;
+  width: 100px;
+  font: bold 15px arial, sans-serif;
+  text-shadow:none;
+  float: right;
+}

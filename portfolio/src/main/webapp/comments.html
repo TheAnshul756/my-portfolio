@@ -12,13 +12,26 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
    </head>
    
-   <body>
+   <body onload="loadComments()">
       <div class="navbar">
          <a href="index.html">HOME</a>
          <a href="comments.html">Comments</a>
       </div>
-      <div style="padding-top: 50px;"></div>
+      <div style="padding-top: 50px;" class="container_3"></div>
       
-      <div id="comment-list"></div>
+      <div id="comment-list" class="container_3"></div>
+
+      <div class="container_3">
+         <form method="POST" action="/new-comment">
+            <input class="name-container" placeholder="Name" type="text" name="name">
+            <br>
+            <textarea rows = "5" cols = "60" class="comment-container" placeholder="Write your comment here!" name="content"></textarea>
+            <br>
+            <button class="form-submit-button">Share</button>
+         </form>
+      </div>
+
+      <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+      <script src="script.js"></script>
    </body>
 </html>
