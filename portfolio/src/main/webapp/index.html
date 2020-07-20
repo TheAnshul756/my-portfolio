@@ -12,13 +12,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
-  <body>
+  <body onload='is_authenticated("index.html")'>
     
     <div class="navbar">
       <a href="index.html">HOME</a>
       <a href="#about-me">About Me</a>
       <a href="#skills">Skills</a>
       <a href="#projects">Projects</a>
+      <a href="#honors-awards">Honors and Awards</a>
+      <a href="comments.html">Comments</a>
+      <a href="#" id="login-button"></a>
     </div>
 
     <header class="container_1">
@@ -46,7 +49,31 @@
           Spring Boot, Flask, Django, BASH, Git, LaTeX.</p>
       <p>When I'm not coding, I love to watch cricket, movies or TV series. I also like to read books. 
         I'm also good at cooking and ocassionally try my hands on different recepies.</p>
-        <a name="skills"></a>
+      </div>
+
+    <div class="container_2">
+      <h1>Education</h1>
+      <h2><i class="fa fa-book"></i> &nbsp; Institute of Technology (BHU), Varanasi</h2>
+      B.Tech. in Computer Science & Engineering <span class="right_float"><i class="fa fa-calendar"></i>&nbsp; July 2017 - Present</span>
+
+      <h2><i class="fa fa-book"></i> &nbsp; Maheshwari Public School, Kota</h2>
+      Central Board of Secondary Education (CBSE) Class 12th <span class="right_float"><i class="fa fa-calendar"></i>&nbsp; 2016</span>
+
+      <h2><i class="fa fa-book"></i> &nbsp; New Look Central School, Bhilwara</h2>
+      Central Board of Secondary Education (CBSE) Class 10th <span class="right_float"><i class="fa fa-calendar"></i>&nbsp; 2014</span>
+    </div>
+
+    <div class="container_2">
+      <h1>Experience</h1>
+      <h2><i class="fa fa-briefcase"></i> &nbsp; Software Engineering Intern</h2>
+      AppDynamics | Internship <span class="right_float"><i class="fa fa-calendar"></i>&nbsp; April 2020 - May 2020</span>
+
+      <h2><i class="fa fa-briefcase"></i> &nbsp; Problem Setting Intern</h2>
+      Hackerrank | Challenge Creator<span class="right_float"><i class="fa fa-calendar"></i>&nbsp; September 2019 - Present</span>
+
+      <h2><i class="fa fa-briefcase"></i> &nbsp; Joint Secretry</h2>
+      Club of Programmers, IIT BHU | Competitive Programming Division <span class="right_float"><i class="fa fa-calendar"></i>&nbsp; April 2019 - Present</span>
+      <a name="skills"></a>
     </div>
 
 
@@ -66,14 +93,14 @@
       <h1>Projects</h1>
       
       <div class= "projects">
-        <h2>Analysis of Opentelemetry library and Django App Instrumentation</h2>
+        <h2><i class="fa fa-certificate"></i> &nbsp; Analysis of Opentelemetry library and Django App Instrumentation</h2>
         <img src="images/otel.png" alt="OpenTelemetry logo">
         <p>Created a Django App and used opentelemtry APIs and libraries to instrument the app.
            Used Zipkin and Jaeger as backend for trace visualisation. Also manually instrumented HTTP Requests, database queries.</p>
       </div>
 
       <div class= "projects">
-        <h2>Pipeline for Machine Translation System & SSF Converter</h2>
+        <h2><i class="fa fa-certificate"></i> &nbsp; Pipeline for Machine Translation System & SSF Converter</h2>
         <img src="images/mtsystem.png" alt="Machine Translation System">
         <p>Created a Python pipeline for Hindi to Bhojpuri Machine Translation System which integrated four
           modules Morph analyzer, Morph generator, POS Tagger & Chunker. Additionally created a Shakti Standard Format(SSF) converter which facilitated the conversion of
@@ -81,36 +108,65 @@
       </div>
 
       <div class= "projects">
-        <h2>School Management Webapp&nbsp; <a href="https://github.com/TheAnshul756/dbms-project" target="_blank"><i class="fa fa-github icon"></i></a></h2>
+        <h2><i class="fa fa-certificate"></i> &nbsp; School Management Webapp&nbsp; <a href="https://github.com/TheAnshul756/dbms-project" target="_blank"><i class="fa fa-github icon"></i></a></h2>
         <img src="images/schoolapp.jpeg">
         <p>An online school management system which include features such as Students and Teachers information, Results and facilitated to update data very easily. 
           Built using Spring Boot in JAVA with frontend beautified using BootStrap on top of HTML/CSS. </p>
       </div>
 
       <div class= "projects">
-        <h2>Rentafolio &nbsp; <a href="https://github.com/TheAnshul756/Rentafolio" target="_blank"><i class="fa fa-github icon"></i></a></h2>
+        <h2><i class="fa fa-certificate"></i> &nbsp; Rentafolio &nbsp; <a href="https://github.com/TheAnshul756/Rentafolio" target="_blank"><i class="fa fa-github icon"></i></a></h2>
         <img src="images/Rentfolio.jpeg" alt="Online Library">
         <p>An online library service where books are crowd-sourced. Users can rent, buy or upload books. Built using Django with 
           frontend beautified using BootStrap on top of HTML/CSS. Included payment portal, custom middleware and RSS Feeds.</p>
       </div>
 
       <div class= "projects">
-        <h2>Chat app using Socket Programming &nbsp; <a href="https://github.com/TheAnshul756/chatSocket" target="_blank"><i class="fa fa-github icon"></i></a></h2>
+        <h2><i class="fa fa-certificate"></i> &nbsp; International Coding Marathon 2020 on Codechef &nbsp; <a href="https://www.codechef.com/ICM2020" target="_blank"><span class="iconify" data-icon="simple-icons:codechef" data-inline="false"></span></a></h2>
+        <img src="images/fb-image-icon.png" alt="Online Library">
+        <p>Probelm Setting in various contests on Codeforces and Codechef. One of them includes Technex, ICM20 on Codehcef which had 8 problems and a total partipation of arond 800 people from all around the globe.</p>
+      </div>
+
+      <div class= "projects">
+        <h2><i class="fa fa-certificate"></i> &nbsp; Chat app using Socket Programming &nbsp; <a href="https://github.com/TheAnshul756/chatSocket" target="_blank"><i class="fa fa-github icon"></i></a></h2>
         <img src="images/chatsocket.png" alt="Chat App">
         <p>Created a simple apps for client side and server side to facilitate chatting and sending data betwwen two or more clients. Built using Socket Programming. Also get 
           to learn about TCP and UDP protcols used for transmission of data.</p>
       </div>
 
       <div class= "projects">
-        <h2>Word Blitz Solver &nbsp; <a href="https://github.com/TheAnshul756/chatSocket" target="_blank"><i class="fa fa-github icon"></i></a>
+        <h2><i class="fa fa-certificate"></i> &nbsp; Word Blitz Solver &nbsp; <a href="https://github.com/TheAnshul756/chatSocket" target="_blank"><i class="fa fa-github icon"></i></a>
         &nbsp; <a href="https://www.youtube.com/watch?v=F-lbm6YYegg" target="_blank"><i class="fa fa-youtube-play icon"></i></a></h2>
         <img src="images/wordblitz.jpeg" alt="Messenger Word Blitz">
         <p>This is one of the fun project which I did in my free time. I automated the popular Facebook Messenger game 
           <a href="https://www.facebook.com/pages/category/Games-Toys/Word-Blitz-509575059455621/">Word Blitz</a>. I used a dataset of 10<sup>5</sup> words available on Github and used Trie data Structure to store them. 
         Also various technologies used in this project includes GOCR, bash scripting and pyautogui.</p>
       </div>
+      <a name="honors-awards"></a>
 
     </div>
+
+    <div class="container_2">
+      <h1>Honors and Awards</h1>
+      <h2><i class="fa fa-certificate"></i> &nbsp; ACM ICPC 2019</h2>
+      Ranked 32 out of more than 3500 participating teams in ACM International Collegiate Programming Contest 2019.
+
+      <h2><i class="fa fa-certificate"></i> &nbsp; Google Codejam</h2>
+      Qualified to Round 2 twice and ranked 1475th in Google Codejam Round 2 2019.
+      
+      <h2><i class="fa fa-certificate"></i> &nbsp; Google Kickstart</h2>
+      Ranked in top 200, 4 times in Google Kicktart rounds with the best global rank of 129.
+
+      <h2><i class="fa fa-certificate"></i> &nbsp; Competitive Profiles</h2>
+      <i class="fa fa-asterisk"></i> &nbsp; <span><span style="color: rgb(170,0,170);">Candidate Master</span> on Codeforces with rating <span style="color: rgb(170,0,170);">2050</span></span>. <br>
+      <i class="fa fa-asterisk"></i> &nbsp; <span><span style="color: #FFBF00;">5</span> <i class="fa fa-star" style="color:#FFBF00;"></i> on Codechef with rating <span style="color: #FFBF00;">2036</span></span>. <br>
+      <i class="fa fa-asterisk"></i> &nbsp; <span><span style="color: #616BD5;">Professional Coder</span> on Topcoder with rating <span style="color: #616BD5;">1477</span>. <br>
+      <i class="fa fa-asterisk"></i> &nbsp; <span><span style="color: #0000FF;">2 Kyu</span> on Atcoder with rating <span style="color: #0000FF;">1639</span>.
+
+      <h2><i class="fa fa-certificate"></i> &nbsp; JEE Advance</h2> 
+      Ranked 756 out of a total 2 Lakh aspirants who were selected out of 14 Lakh aspirants through JEE Mains Exam and henceforth got admission into Computer Science and Engineering Department,Indian Institute Of Technology,Varanasi
+    </div>
+
 
     <footer>
       <div class="footer">
