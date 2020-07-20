@@ -39,7 +39,9 @@ public class ListCommentServlet extends HttpServlet {
 
         Gson gson = new Gson();
 
+        // System.out.println("comments :"+gson.toJson(comments));
         response.setContentType("application/json;");
         response.getWriter().println(gson.toJson(comments));
+
     }
 }
